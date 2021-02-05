@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonBackButton, IonButtons, IonHeader, IonPage, IonToolbar, IonTitle, IonContent } from '@ionic/react';
 
-const Details: React.FC = () => {
+export default function UserPage () {
   return (
     <IonPage>
       <IonHeader>
@@ -18,5 +18,3 @@ const Details: React.FC = () => {
     </IonPage>
   );
 };
-
-export default Details;

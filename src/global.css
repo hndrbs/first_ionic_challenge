@@ -149,3 +149,7 @@
     --color: white;
   }
 }
+
+ion-content {
+  --ion-background-color: url(https://www.hariansuara.com/files/posts/20004/https___cdn.cnn.com_cnnnext_dam_assets_200320110619-coronavirus-animation.jpg);
+}

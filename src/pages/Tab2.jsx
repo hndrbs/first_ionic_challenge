@@ -3,9 +3,9 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFab, IonFabBut
 import { camera, trash, close } from 'ionicons/icons';
 import { usePhotoGallery, Photo } from '../hooks/usePhotoGallery';
 
-const Tab2: React.FC = () => {
+const Tab2 = () => {
   const { deletePhoto, photos, takePhoto } = usePhotoGallery();
-  const [photoToDelete, setPhotoToDelete] = useState<Photo>();
+  const [photoToDelete, setPhotoToDelete] = useState();
 
   return (
     <IonPage>
