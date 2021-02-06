@@ -1,29 +1,28 @@
 import React from 'react';
-import { IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonLabel, IonIcon } from '@ionic/react'
-import { documentTextOutline, personCircleOutline } from 'ionicons/icons'
-import { Redirect, Route } from 'react-router-dom'
-import AddVictim from '../components/VictimCard'
+import { IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonLabel, IonIcon, IonContent } from '@ionic/react'
+import { listCircleOutline, addCircleOutline } from 'ionicons/icons'
+import { Route } from 'react-router-dom'
+import AddVictim from '../components/AddVictim'
 import VictimList from '../components/VictimList'
 
 
 export default function UserPage () {
   return (
     <IonTabs>
-      <IonRouterOutlet>
-        <Redirect exact path="/user" to="/user/victims" />
-        <Route path="/user/victims" render={() => <VictimList />} exact={true} />
-        <Route path="/user/add" render={() => <AddVictim />} exact={true} />
-      </IonRouterOutlet>
-      <IonTabBar slot="bottom">
-        <IonTabButton tab="VictimList" href="/user/victims">
-          <IonIcon icon={personCircleOutline} />
-          <IonLabel>Victim List</IonLabel>
-        </IonTabButton>
-        <IonTabButton tab="AddVictim" href="/user/add">
-          <IonIcon icon={documentTextOutline} />
-          <IonLabel>Add Victim</IonLabel>
-        </IonTabButton>
-      </IonTabBar>
+    <IonRouterOutlet>
+      <Route path="/user/victims" render={() => <VictimList />} exact={true} />
+      <Route path="/user/add" render={() => <AddVictim />} exact={true} />
+    </IonRouterOutlet>
+    <IonTabBar slot="bottom">
+      <IonTabButton tab="VictimList" href="/user/victims">
+        <IonIcon icon={listCircleOutline} />
+        <IonLabel>Victim List</IonLabel>
+      </IonTabButton>
+      <IonTabButton tab="AddVictim" href="/user/add">
+        <IonIcon icon={addCircleOutline} />
+        <IonLabel>Add Victim</IonLabel>
+      </IonTabButton>
+    </IonTabBar>
     </IonTabs>
   );
 };

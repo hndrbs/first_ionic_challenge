@@ -13,7 +13,7 @@ export default function LoginPage () {
 
   const loginHandler = (e) => {
     e.preventDefault()
-    history.push('/user')
+    history.push('/user/victims')
   }
 
   return (

@@ -1,14 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs
-} from '@ionic/react';
+import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { LoginPage, UserPage } from './pages';
 
@@ -39,7 +31,8 @@ const App = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route path="/login" component={LoginPage} exact={true} />
-        <Route path="/user" component={UserPage} exact={true} />
+        <Route path="/user/victims" component={UserPage} exact={true} />
+        <Route path="/user/add" component={UserPage} exact={true} />
         <Route path="/" render={() => <Redirect to="/login" />} exact={true} />
       </IonRouterOutlet>
     </IonReactRouter>
