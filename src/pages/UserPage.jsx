@@ -2,8 +2,8 @@ import React from 'react';
 import { IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonLabel, IonIcon, IonContent } from '@ionic/react'
 import { listCircleOutline, addCircleOutline } from 'ionicons/icons'
 import { Route } from 'react-router-dom'
-import AddVictim from '../components/AddVictim'
-import VictimList from '../components/VictimList'
+import AddVictim from './AddVictim'
+import VictimList from './VictimList'
 
 
 export default function UserPage () {

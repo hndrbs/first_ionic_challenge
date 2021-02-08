@@ -16,7 +16,7 @@ export default function VictimList () {
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton defaultHref="/user/add" />
+            <IonBackButton defaultHref="/user/victims" />
           </IonButtons>
           <IonTitle>Reported Victims by Me</IonTitle>
         </IonToolbar>
