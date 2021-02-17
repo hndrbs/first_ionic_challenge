@@ -1,0 +1,7 @@
+{
+  "name": "KenangCovid19",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
