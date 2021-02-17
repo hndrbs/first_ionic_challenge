@@ -1,16 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
-import { 
-  IonHeader, 
-  IonContent,
-  IonToolbar,
-  IonButtons,
-  IonBackButton,
-  IonTitle,
-  IonItem,
-  IonInput,
-  IonButton
-} from '@ionic/react';
+import { IonInput, IonButton } from '@ionic/react';
+import PageWrapper from '../components/PageWrapper'
 
 const Item = styled.div`
   display: flex;
@@ -34,37 +25,24 @@ const Item = styled.div`
 const Home: React.FC = () => {
 
   return (
-    <>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Login</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      {/*-- Header without a border --*/}
-      <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Login</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-
-        <Item className="col">
-          <h5>Please login first</h5>
-          <IonInput 
-            type="number"
-            placeholder="Enter your phone number here"
-          />
-          <IonInput 
-            type="password"
-            placeholder="Enter your password here"
-          />
-          <div className="row">
-            <IonButton>Login</IonButton>
-          </div>
-        </Item>
-      </IonContent>
-    </>
+    <PageWrapper
+      title="Login"
+    >
+      <Item className="col">
+        <h5>Please login first</h5>
+        <IonInput 
+          type="number"
+          placeholder="Enter your phone number here"
+        />
+        <IonInput 
+          type="password"
+          placeholder="Enter your password here"
+        />
+        <div className="row">
+          <IonButton>Login</IonButton>
+        </div>
+      </Item>
+    </PageWrapper>
   )
 }
 
